@@ -1,0 +1,22 @@
+[package]
+name = "one-dimension-up"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.95"
+description = "A deterministic Bevy renderer for a homogeneous-coordinate animation"
+license = "MIT"
+
+[dependencies]
+bevy = { version = "=0.19.1", default-features = false, features = ["std", "async_executor", "bevy_asset", "bevy_log", "bevy_winit", "bevy_render", "bevy_core_pipeline", "bevy_camera", "multi_threaded", "x11", "wayland", "keyboard", "mouse", "png"] }
+bevy_egui = { version = "=0.42.0", default-features = false, features = ["render", "default_fonts"] }
+
+[profile.dev]
+opt-level = 1
+debug = 0
+
+[profile.dev.package."*"]
+opt-level = 2
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
