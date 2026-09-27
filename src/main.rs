@@ -45,7 +45,7 @@ fn main() -> ExitCode {
             ExitCode::SUCCESS
         }
         Ok(cli::Request::Version) => {
-            println!("one-dimension-up {}", env!("CARGO_PKG_VERSION"));
+            println!("homogeneous-coordinates {}", env!("CARGO_PKG_VERSION"));
             ExitCode::SUCCESS
         }
         Ok(cli::Request::Render(options)) => match run(options) {

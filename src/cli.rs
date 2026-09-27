@@ -23,8 +23,8 @@ pub fn help(duration: f32) -> String {
 Render a {duration}-second silent animation of homogeneous coordinates.
 
 Usage:
-  one-dimension-up [--output FILE.mp4] [OPTIONS]
-  one-dimension-up --still FILE.png [--time SECONDS] [OPTIONS]
+  homogeneous-coordinates [--output FILE.mp4] [OPTIONS]
+  homogeneous-coordinates --still FILE.png [--time SECONDS] [OPTIONS]
 
 Options:
   --output FILE.mp4   Video destination (default: homogeneous-coordinates.mp4)
